@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="libs/jquery/dist/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="libs/angular/angular.js"></script>
+    <script src="/artist.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Search Artist</button>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <label for="TrackName">Name:</label></br>
+                        <input type="text" id="TrackName" ng-model="trackName"></br>
+                        <label for="TrackNum">No. of Tracks:</label></br>
+                        <input type="text" id="TrackNum" ng-model="trackNum">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="getArtist(trackName,trackNum,'false')">Search</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!--<div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>-->
+            <ul class="nav navbar-nav" ng-repeat="name in names">
+                <!--<li class="active"><a href="#">Home</a></li>-->
+                <li ng-click="getArtist(name,1,'true')">
+                    <a href="">{{name}}</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" ng-if="resultArtistName">
+
+        <div>Artist Name:</div>
+        <span ng-bind="resultArtistName"></span>
+        <div>Track Name:</div>
+        <span ng-bind="resultTrackName"></span>
+        <div>Image:</div>
+        <img alt="" ng-src="{{resultImage}}" />
+    </div>
+</body>
+
+</HTML>

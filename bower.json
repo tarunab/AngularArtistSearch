@@ -1,0 +1,22 @@
+{
+  "name": "artistSearch",
+  "description": "Taruna Bishnoi's artist search",
+  "main": "artist.js",
+  "authors": [
+    "Taruna Bishnoi"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/tarunab/AngularArtistSearch",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "angularjs#^1.6.4"
+  }
+}

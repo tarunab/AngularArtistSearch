@@ -1,0 +1,32 @@
+{
+  "name": "artistsearch",
+  "version": "2.0.0",
+  "description": "Artist Search using angualr js",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "dotenv": "^4.0.0",
+    "edge": "^6.5.1",
+    "edge-sql": "^0.1.2",
+    "express": "^4.15.2",
+    "gulp": "^3.9.1",
+    "mssql": "^4.0.4",
+    "node-sp-auth": "^1.3.3",
+    "request-promise": "^4.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarunab/AngularArtistSearch.git"
+  },
+  "author": "Taruna Bishnoi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tarunab/AngularArtistSearch/issues"
+  },
+  "homepage": "https://github.com/tarunab/AngularArtistSearch#readme"
+}
